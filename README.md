@@ -1,4 +1,8 @@
-# Audio Transcribe CLI
+# Simple Audio Transcription CLI
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
+![Powered by](https://img.shields.io/badge/Powered%20by-faster--whisper-orange)
+![CUDA](https://img.shields.io/badge/GPU%20Support-CUDA-green?logo=nvidia)
 
 A fast and easy-to-use Command Line Interface (CLI) application for transcribing audio files using the powerful [faster-whisper](https://github.com/SYSTRAN/faster-whisper) engine. It supports CPU and GPU processing, and handles transcription across dozens of languages.
 
