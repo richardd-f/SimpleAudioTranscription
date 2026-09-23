@@ -102,6 +102,7 @@ def main():
     # ------------------------------
     os.makedirs("Audio", exist_ok=True)
     os.makedirs("Result", exist_ok=True)
+    os.makedirs("Model", exist_ok=True)
 
     # ------------------------------
     # Audio File
@@ -145,16 +146,23 @@ def main():
         
     output_file = os.path.join("Result", output_file_input)
 
-    print("\nLoading model...")
     start = time.time()
+
+    try:
+        from faster_whisper import download_model
+        download_model(model_name, cache_dir="Model", local_files_only=True)
+        print(f"\nLoading Model {model_name.capitalize()}...")
+    except Exception:
+        print(f"\nDownloading Model {model_name.capitalize()}...")
 
     model = WhisperModel(
         model_name,
         device=device_choice,
         compute_type="default",
+        download_root="Model"
     )
 
-    print(f"Model loaded in {time.time()-start:.2f} sec")
+    print(f"Model ready in {time.time()-start:.2f} sec")
     print("\nTranscribing...\n")
 
     segments, info = model.transcribe(
