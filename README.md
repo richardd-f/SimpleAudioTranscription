@@ -18,6 +18,11 @@ A fast and easy-to-use Command Line Interface (CLI) application for transcribing
 
 ## 📖 How to Use
 
+> **Note**: This application uses a strict folder structure to keep things organized. 
+> - 📥 Place your input media inside the **`Audio/`** folder.
+> - 📤 Your final transcripts will be saved in the **`Result/`** folder.
+> - 🧠 AI models are stored in the **`Model/`** folder.
+
 1. **Prepare your audio**: 
    Place the audio or video file you want to transcribe (e.g., `presentation.m4a`, `audio.mp3`) inside the `Audio/` folder.
 2. **Run the app**:
